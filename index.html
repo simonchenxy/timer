@@ -2,6 +2,7 @@
 <html lang="en" ng-app="timeApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
     <script src="angular.min.js"></script>
@@ -11,21 +12,21 @@
     <div class="time-box clear">
         <div class="time-item">
             <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.hour}}</span>
-            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="hour" maxlength="2">
+            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="timeCtrl.hour" maxlength="2">
         </div>
         <div class="time-item">
             :
         </div>
         <div class="time-item">
             <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.min}}</span>
-            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="min" maxlength="2">
+            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="timeCtrl.min" maxlength="2">
         </div>
         <div class="time-item">
             :
         </div>
         <div class="time-item">
             <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.sec}}</span>
-            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="sec" maxlength="2">
+            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="timeCtrl.sec" maxlength="2">
         </div>
     </div>
     <div class="button-box">
