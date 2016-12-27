@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="timeApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="angular.min.js"></script>
+</head>
+<body ng-controller="timeCtrl">
+<div class="container">
+    <div class="time-box clear">
+        <div class="time-item">
+            <span ng-show="edit" ng-dblclick="edit=false">{{hour}}</span>
+            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="hour" maxlength="2">
+        </div>
+        <div class="time-item">
+            :
+        </div>
+        <div class="time-item">
+            <span ng-show="edit" ng-dblclick="edit=false">{{min}}</span>
+            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="min" maxlength="2">
+        </div>
+        <div class="time-item">
+            :
+        </div>
+        <div class="time-item">
+            <span ng-show="edit" ng-dblclick="edit=false">{{sec}}</span>
+            <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="sec" maxlength="2">
+        </div>
+    </div>
+    <div class="button-box">
+        <button class="btn" type="button" ng-show="go" ng-click="start()">Start</button>
+        <button class="btn" type="button" ng-show="!go" ng-click="stop()">Stop</button>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
