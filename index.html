@@ -10,21 +10,21 @@
 <div class="container">
     <div class="time-box clear">
         <div class="time-item">
-            <span ng-show="edit" ng-dblclick="edit=false">{{hour}}</span>
+            <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.hour}}</span>
             <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="hour" maxlength="2">
         </div>
         <div class="time-item">
             :
         </div>
         <div class="time-item">
-            <span ng-show="edit" ng-dblclick="edit=false">{{min}}</span>
+            <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.min}}</span>
             <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="min" maxlength="2">
         </div>
         <div class="time-item">
             :
         </div>
         <div class="time-item">
-            <span ng-show="edit" ng-dblclick="edit=false">{{sec}}</span>
+            <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.sec}}</span>
             <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="sec" maxlength="2">
         </div>
     </div>
