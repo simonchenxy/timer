@@ -3,10 +3,10 @@
  */
 angular.module("timeApp", []).controller("timeCtrl", ["$scope", "$interval", function ($scope, $interval) {
     $scope.edit = true;
+    $scope.go = true;
     $scope.hour = "00";
     $scope.min = "00";
     $scope.sec = "00";
-    $scope.go = true;
     $scope.start = function () {
         if($scope.hour == 0 && $scope.min == 0 && $scope.sec == 0){
             alert("Please type the number into the input!")
@@ -18,7 +18,6 @@ angular.module("timeApp", []).controller("timeCtrl", ["$scope", "$interval", fun
             checkNull($scope.sec);
             t = $interval(startTime, 1000);
         }
-
         function startTime() {
             $scope.sec--;
 
@@ -37,7 +36,6 @@ angular.module("timeApp", []).controller("timeCtrl", ["$scope", "$interval", fun
                 $interval.cancel(t);
             }
         }
-
         function checktime(param) {
             if (param < 10) {
                 param = "0" + param;
@@ -57,6 +55,4 @@ angular.module("timeApp", []).controller("timeCtrl", ["$scope", "$interval", fun
         $scope.go = true;
         $interval.cancel(t);
     }
-
-
 }])
