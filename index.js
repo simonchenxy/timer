@@ -72,7 +72,7 @@ angular.module("timeApp", [])
                 }
                 return param;
             },
-            inject:function(param){
+            inject: function (param) {
                 param.hour = this.checkTime(param.hour);
                 param.min = this.checkTime(param.min);
                 param.sec = this.checkTime(param.sec);
@@ -85,11 +85,20 @@ angular.module("timeApp", [])
     .directive("alert", function () {
         return {
             restrict: "C",
-            replace:false,
-            template:
-            "<div>" +
+            replace: false,
+            template: "<div>" +
             "<span ng-click='close()'>X</span>" +
             "<p>Done!</p>" +
             "</div>"
+        }
+    })
+    .directive("stop", function () {
+        return {
+            restrict: "A",
+            link: function (scope, element, attrs) {
+                element.on("dblclick",function(){
+                    scope.stop();
+                })
+            }
         }
     })

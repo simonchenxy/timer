@@ -11,21 +11,21 @@
     <p>Please double click follow any number and type the number what you want.</p>
     <div class="time-box clear">
         <div class="time-item">
-            <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.hour}}</span>
+            <span ng-show="edit" ng-dblclick="edit=false" stop>{{timeCtrl.hour}}</span>
             <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="timeCtrl.hour" maxlength="2">
         </div>
         <div class="time-item">
             :
         </div>
         <div class="time-item">
-            <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.min}}</span>
+            <span ng-show="edit" ng-dblclick="edit=false" stop>{{timeCtrl.min}}</span>
             <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="timeCtrl.min" maxlength="2">
         </div>
         <div class="time-item">
             :
         </div>
         <div class="time-item">
-            <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.sec}}</span>
+            <span ng-show="edit" ng-dblclick="edit=false" stop>{{timeCtrl.sec}}</span>
             <input type="text" ng-show="!edit" ng-dblclick="edit=true" ng-model="timeCtrl.sec" maxlength="2">
         </div>
     </div>
