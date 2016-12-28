@@ -2,13 +2,13 @@
 <html lang="en" ng-app="timeApp">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
     <script src="angular.min.js"></script>
 </head>
 <body ng-controller="timeCtrl">
 <div class="container">
+    <p>Please double click follow any number and type the number what you want.</p>
     <div class="time-box clear">
         <div class="time-item">
             <span ng-show="edit" ng-dblclick="edit=false">{{timeCtrl.hour}}</span>
@@ -30,10 +30,12 @@
         </div>
     </div>
     <div class="button-box">
+        <button class="btn" type="button" ng-click="reset()">Reset</button>
         <button class="btn" type="button" ng-show="go" ng-click="start()">Start</button>
         <button class="btn" type="button" ng-show="!go" ng-click="stop()">Stop</button>
     </div>
 </div>
+<div class="alert" ng-show="alert"></div>
 <script src="index.js"></script>
 </body>
 </html>
