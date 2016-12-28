@@ -38,6 +38,7 @@ angular.module("timeApp", [])
                 sec: "00"
             };
             $interval.cancel($scope.t);
+            $scope.edit = true;
             $scope.go = true;
         };
         $scope.close = function () {
